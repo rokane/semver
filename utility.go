@@ -1,11 +1,5 @@
 package main
 
-// Utility is an interface for manipulating version numbers
-// according to the semantic versioning specification
-type Utility interface {
-	Increment(v Version, l Release) (Version, error)
-}
-
 // Release represents a level in a Version
 type Release uint8
 

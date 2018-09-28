@@ -13,7 +13,7 @@ type UtilController struct {
 	Range          string
 }
 
-// Increment return a version which is one level higher in terms of precendence
+// Increment return a version which is one level higher in terms of precedence
 // defined by the release version specified.
 func (uc *UtilController) Increment(v Version, l Release) (Version, error) {
 	v.SetMetaData(uc.BuildMeta)

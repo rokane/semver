@@ -1,0 +1,16 @@
+language: go
+sudo: required
+go_import_path: github.com/rokane/semver
+install:
+  - go version
+  - go get -u github.com/mattn/goveralls
+  - go get -u gopkg.in/alecthomas/gometalinter.v2
+  - gometalinter.v2 --install
+  - go get -d -t ./...
+script:
+  - gometalinter.v2 ./...
+  - go build ./...
+  - go install ./...
+  - go test -race -coverprofile=coverage.txt -covermode=atomic -v ./...
+after_success:
+  - goveralls -coverprofile=coverage.out -service=travis -repotoken=kQ1DIavoKkdZa30v3CFcPxYMcgwaTIXS6

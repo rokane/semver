@@ -1,0 +1,38 @@
+{
+  "Enable": [
+    "deadcode",
+    "unconvert",
+    "gofmt",
+    "goimports",
+    "misspell",
+    "nakedret",
+    "unparam",
+    "safesql",
+    "megacheck",
+    "vet",
+    "vetshadow",
+    "gotype",
+    "gotypex",
+    "deadcode",
+    "gocyclo",
+    "golint",
+    "varcheck",
+    "structcheck",
+    "maligned",
+    "errcheck",
+    "megacheck",
+    "ineffassign",
+    "interfacer",
+    "unconvert",
+    "goconst",
+    "lll"
+  ],
+  "Disable": ["dupl", "test", "testify"],
+  "Cyclo": 15,
+  "LineLength": 115,
+  "Deadline": "2m",
+  "Exclude": [
+    "^validate.go:.*:warning: .* other occurrence.* found .*(goconst)",
+    "^guesser.go:.*:warning: .* other occurrence.* found .*(goconst)"
+  ]
+}

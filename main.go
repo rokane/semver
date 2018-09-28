@@ -70,7 +70,8 @@ func ParseIncrementLevel(level string) (Release, error) {
 	if val, ok := valid[level]; ok {
 		return val, nil
 	}
-	return 0, fmt.Errorf("Increment value: '%s' not in: ['major', 'minor', 'patch', 'premajor', 'preminor', 'prepatch']", level)
+	return 0, fmt.Errorf(
+		"Increment value: '%s' not in: ['major', 'minor', 'patch', 'premajor', 'preminor', 'prepatch']", level)
 }
 
 // ParseRange -

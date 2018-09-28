@@ -16,7 +16,7 @@ func TestParseVersionString(t *testing.T) {
 	assert.Equal(expVersion, v)
 
 	invalidStr := "a.b.c"
-	v, err = ParseVerionString(invalidStr)
+	_, err = ParseVerionString(invalidStr)
 	assert.Error(err)
 }
 
@@ -56,7 +56,7 @@ func TestParseIncrementLevel(t *testing.T) {
 	assert.NoError(err)
 	assert.Equal(PrePatch, r)
 
-	r, err = ParseIncrementLevel("something")
+	_, err = ParseIncrementLevel("something")
 	assert.Error(err)
 }
 
